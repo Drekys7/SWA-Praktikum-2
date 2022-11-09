@@ -61,6 +61,16 @@ public class MocktailResource {
 
         // add rezept to Mocktail
         inPost.addIngredientToMocktail(ingredientIDs, m1);
+
+        
+        int m2 = Post.addMocktail("Wodka");
+
+        List<Integer> ingredientIDs2 = new ArrayList<>();
+        // sex on the beach rezept
+        ingredientIDs2.add(inPost.createIngredient("Wodka"));
+
+        // add rezept to Mocktail
+        inPost.addIngredientToMocktail(ingredientIDs2, m2);
     }
 
     @GET
